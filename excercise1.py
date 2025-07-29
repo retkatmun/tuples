@@ -6,7 +6,7 @@ response = (True,"welcome",["email","username"])
 (succes,message,data) = response
 print(succes)
 print(message)
-print(wwdata)
+print(data)
 
 my_response = list(response)
 my_response[0] = (False)
