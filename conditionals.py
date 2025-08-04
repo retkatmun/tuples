@@ -45,12 +45,12 @@ customer = {
 }
 
 discount = 0
-freebie = NOne
+freebie = None
 
 if customer["loyalty_card"]:
    discount += 10
    
-    if customer["order_amount"] > 20000:
+   if customer["order_amount"] > 20000:
         discount +5 
 else:
    if customer["order_amount"] > 20000:
@@ -61,36 +61,22 @@ if customer["is_student"]:
 final_discount_amount = (discount / 100) * customer["order_amount"]
 final_amount = customer["order_amount"] - final_discount_amount
 
-
-#def customer_discount(customer):
-
-
-
-
-
-
-
-
-
-'''
-# Prepare summary
 order_summary = {
-    "customer_name": customer["name"],
-    "initial_amount": customer["order_amount"],
-    "total_discount_percent": discount,
-    "final_amount_to_pay": final_amount,
-    "freebie": freebie
-}
-
-# Print summary for cashier
-print("=== Order Summary ===")
-print(f"Customer Name        : {order_summary['customer_name']}")
-print(f"Initial Amount (₦)   : {order_summary['initial_amount']}")
-print(f"Total Discount (%)   : {order_summary['total_discount_percent']}%")
-print(f"Final Amount (₦)     : {order_summary['final_amount_to_pay']:.2f}")
+      "customer_name": customer["name"],
+      "initial_amount": customer["order_amount"],
+      "total_discount_percent": discount,
+      "final_amount_to_pay": final_amount,
+      "freebie": freebie
+  } 
+ 
+print(f"Customer Name : {order_summary['customer_name']}")
+print(f"Initial Amount : {order_summary['initial_amount']}")
+print(f"Total Discount : {order_summary['total_discount_percent']}%")
+print(f"Final Amount : {order_summary['final_amount_to_pay']:.2f}")
+ 
 if order_summary["freebie"]:
-    print(f"Freebie              : {order_summary['freebie']}")
+      print(f"Freebie : {order_summary['freebie']}")
 else:
-    print("Freebie              : None")
+   print("Freebie : None")
 
-'''
+
