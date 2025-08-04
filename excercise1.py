@@ -1,3 +1,4 @@
+'''
 response = ("good",4)
 print(type(response),response)
 
@@ -25,6 +26,6 @@ mytuple = fruits * 2
 
 print(mytuple)
 
-
+'''
 b = [1,"2",3]
-print(b[0] + [2])
+print(b[0] + 2)
